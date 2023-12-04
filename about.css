@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.63),rgba(0,0,0,0.63)),url(BackgroundImg.jpg);
+    color: #ededed;
+    min-height: 100vh;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;  
+    background: linear-gradient(#283b52,#283b52);
+    border-bottom: 3px solid gradient(rgba(135, 206, 235, 1));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #283b52;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+.navbar a{
+    font-size: 18px;
+    color: #a0a0a0;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    position: relative;
+}
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #283b52;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+.navbar a:after{
+    content: "";
+    position: absolute;
+    background-color: #ededed;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: .7s;
+}
+.navbar a:hover{
+    color: #fff;
+    transition: 1s;
+}
+.navbar a:hover:after{
+    width: 100%;
+}
+.about {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.about-content {
+    max-width: 600px;
+}
+.about-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+    
+    position: relative;
+}
+.about-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: skyblue;
+    
+    position: relative;
+}
+.about-content p {
+    padding-bottom: 10px;
+   
+    position: relative;
+}
+.about-skills h1{
+    top: 250px;
+    left: -440px;
+    font-size: 60px;
+    position: relative;
+}
+.about-skills .skills {
+    top: 270px;
+    left: -450px;
+    font-size: 20px;
+    position: relative;
+}
+.about-lang h1{
+    left: 200px;
+    font-size: 60px;
+    top: 278px;
+    position: relative;
+}
+.about-lang .lang{
+    left: 270px;
+    top: 300px;
+    font-size: 20px;
+    position: relative;
+}
+.meImg {
+    border-radius: 15%;
+    overflow: hidden;
+    position: relative;
+    top: -100px;
+    left: -125px;
+    height: 424px;
+    border: solid 2px skyblue;
+}
+@keyframes showRight {
+    100%{
+        width: 0;
+    }
+}

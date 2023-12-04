@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+body {
+    background-image: linear-gradient(rgba(0,0,0,0.63),rgba(0,0,0,0.63)),url(BackgroundImg.jpg);
+    color: #ededed;
+    overflow: hidden;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;  
+    background: linear-gradient(#283b52,#283b52);
+    border-bottom: 3px solid gradient(rgba(135, 206, 235, 1));
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 600;
+}
+.logo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #283b52;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+.navbar a{
+    font-size: 18px;
+    color: #a0a0a0;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    position: relative;
+}
+.navbar a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #283b52;
+    animation: showRight 1s ease forwards;
+    animation-delay: .4s;
+}
+/* underline hover */
+.navbar a:after{
+    content: "";
+    position: absolute;
+    background-color: #ededed;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -5px;
+    transition: .7s;
+}
+/* word hover */
+.navbar a:hover{
+    color: #fff;
+    transition: 1s;
+}
+/* underline hover */
+.navbar a:hover:after{
+    width: 100%;
+}
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.home-content {
+    max-width: 600px;
+}
+.home-content h1 {
+    font-size: 60px;
+    font-weight: 700;
+}
+.home-content h3 {
+    font-size: 32px;
+    font-weight: 700;
+    color: skyblue;
+}
+.home-content p {
+    padding-bottom: 10px;
+}
+.home-content .btn-box {
+    width: 345px;
+    height: 50px;   
+}
+.btn-box a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 100%;
+    background: skyblue;
+    border: 2px solid skyblue;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #283b52;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .7s;                
+}
+.btn-box a:hover {
+    color: #283b52;
+}
+.btn-box a:nth-child(1) {
+    background: transparent;
+    color: skyblue;
+}
+.btn-box a:nth-child(1):hover {
+    background: skyblue;
+    color: #283b52;
+}
+.socials{
+    font-size: 25PX;
+    top: 330px;
+    right: -1690px;
+    position: relative;
+}
+@keyframes showRight {
+    100%{
+        width: 0;
+    }
+}
