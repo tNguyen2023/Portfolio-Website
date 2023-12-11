@@ -95,6 +95,14 @@ body {
     font-weight: 700;
     color: skyblue;
 }
+.home-content h3 a:link {
+    text-decoration: none;
+    color: skyblue;
+}
+.home-content h3 a:visited {
+    color: skyblue;
+    text-decoration: none;
+}
 .home-content p {
     padding-bottom: 10px;
 }
